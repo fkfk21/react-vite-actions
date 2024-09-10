@@ -4,7 +4,7 @@ import NotFoundPage from '@/component/page/not_found';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/react-vite-actions">
       <Routes>
         <Route path="/" element={<HomePage />} />
         {/* <Route path="/test" element={<Test />} /> */}
