@@ -4,7 +4,7 @@ import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: './react-vite-actions/',
+  base: '/react-vite-actions/',
   plugins: [react()],
   resolve: {
     alias: {
