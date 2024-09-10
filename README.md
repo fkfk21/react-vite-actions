@@ -5,6 +5,12 @@ React + Vite + Github Actions
 
 automatically deploy react project to github pages
 
+## For new project
+1. Change PROJECT_BASENAME in vite.config.js
+
+TODO: automate
+
+
 ## Frontend Environment
 React + Typescript + Vite + TailwindCSS
 
