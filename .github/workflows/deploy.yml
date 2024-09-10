@@ -13,6 +13,10 @@ concurrency:
   group: 'pages'
   cancel-in-progress: true
 
+defaults:
+  run: 
+    working-directory: ./ws
+
 jobs:
   deploy:
     environment:
@@ -23,25 +27,24 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
+      - run: echo "${{ github.workspace }}"
+      
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          working-directory: ./ws
           node-version: '20'
           cache: 'npm'
       
       - name: Install Dependencies
-        working-directory: ./ws
         run: npm install
       
       - name: Build
-        working-directory: ./ws
         run: npm run build
       
       - name: Upload Artifacts
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./ws/dist
+          path: ./dist
       
       - name: Deploy to Github Pages
         id: deployment
