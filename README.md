@@ -1,7 +1,7 @@
-# React Vite Actions
+# React Tailwind Actions
 
 Sample code for:
-React + Vite + Github Actions
+React + TailwindCSS + Github Actions
 
 automatically deploy react project to github pages
 
